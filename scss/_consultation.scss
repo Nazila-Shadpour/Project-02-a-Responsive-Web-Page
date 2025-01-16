@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+.consultation-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    max-width: 1587px;
+    background-color: $text-color-light;
+    border-radius: 24px;
+}
+
+.consultation-text {
+    width: 100%;
+    padding: 1rem;
+}
+.consultation-text h3 {
+    font-size: 1.5rem;
+    color: $text-color-dark;
+}
+
+.consultation-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0.5rem;
+}
+
+.consultation-images figure {
+  margin: 0; 
+  display: flex;
+  flex-direction: column; 
+}
+
+.consultation-images img {
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.consultation-images figcaption {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem; 
+  display: block;
+  color: $text-color-dark;
+}
+
+.figcaption-position {
+  font-size: 0.75rem;
+  color: #ffffffa6;
+}
+
+.consultation-button {
+    width: 100%;
+}
+
+.consultation-button a {
+    text-decoration: none;
+    background-color: $button-color;
+    border-radius: 18px;
+    margin: 1rem;
+    color: $text-color-light;
+    padding: $padding;
+    display: block;
+    text-align: center; 
+    cursor: pointer;
+}
+
+
+@media (min-width: 50em) {
+    .consultation-section {
+        display: grid;
+        margin: 2rem auto;
+        padding: 3rem;
+        align-items: start; 
+      }
+      
+      .consultation-text {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      
+      .consultation-button {
+        display: flex; 
+      }
+      
+      .consultation-images {
+        grid-row: 3 /1 ;
+      }
+      
+      .consultation-images img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 24px;
+      }  
+}
