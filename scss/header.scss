@@ -1,0 +1,317 @@
+// Variables
+$header-height: 80px;
+$primary-color: #FF4B2B;
+$text-color: rgba(255, 255, 255, 0.85);
+$background-color: #000;
+$dropdown-background: #1E1E1E;
+$transition-duration: 0.3s;
+$mobile-breakpoint: 1024px;
+@use "sass:color";
+
+.header {
+  background-color: $background-color;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 30px;
+    margin-right: 80px;
+
+    &-img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  // 汉堡菜单按钮样式
+  &__menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+    }
+  }
+
+  &__menu-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: $text-color;
+    transition: $transition-duration;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    margin-right: 40px;
+
+    @media (max-width: $mobile-breakpoint) {
+      position: fixed;
+      top: -150vh; // 改为更大的负值确保完全隐藏
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $background-color;
+      margin: 0;
+      padding: 80px 20px 20px;
+      transition: all $transition-duration ease-in-out; // 添加ease-in-out使动画更流畅
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      visibility: hidden; // 默认隐藏
+
+      &.active {
+        top: 0;
+        visibility: visible; // 显示菜单
+        
+        // CTA按钮只在导航菜单激活时显示
+        .header__nav-cta {
+            margin-top: 0px;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 32px;
+
+    @media (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+  }
+
+  &__nav-item {
+    position: relative;
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &--dropdown {
+      .header__dropdown {
+        @media (min-width: $mobile-breakpoint + 1) {
+          display: none;  // 桌面端默认隐藏
+          position: absolute;
+          top: 100%;
+          left: -20px;
+          background-color: $dropdown-background;
+          border-radius: 8px;
+          padding: 12px 0;
+          min-width: 280px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: all $transition-duration ease;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+          display: none;
+          padding-left: 20px;
+          margin: 0;
+        }
+      }
+
+      @media (min-width: $mobile-breakpoint + 1) {
+        &:hover {
+          .header__dropdown {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &.active {
+        .header__dropdown {
+          display: block;
+        }
+
+        .header__nav-arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__nav-link {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity $transition-duration;
+    display: block;
+    padding: 15px 0;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--with-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  // 移动端CTA按钮容器
+  &__nav-cta {
+    display: none;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+      margin-top: auto;
+      padding: 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all $transition-duration 0.2s;
+    }
+  }
+
+  // 桌面端CTA按钮容器
+  &__cta {
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  &__cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color $transition-duration;
+    
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+        background-color: color.scale($primary-color, $lightness: -10%);
+
+    }
+  }
+
+  &__nav-arrow {
+    font-size: 12px;
+    transition: transform $transition-duration;
+  }
+
+  &__dropdown {
+    @media (min-width: $mobile-breakpoint + 1) {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      background-color: $dropdown-background;
+      border-radius: 8px;
+      padding: 12px 0;
+      min-width: 280px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      padding-left: 20px;
+      margin: 0;
+    }
+  }
+
+  &__dropdown-item {
+    padding: 0 8px;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 8px 0;
+    }
+  }
+
+  &__dropdown-link {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: $text-color;
+    text-decoration: none;
+    transition: background-color $transition-duration;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__dropdown-icon {
+    margin-right: 12px;
+    font-size: 20px;
+  }
+
+  &__dropdown-text {
+    font-size: 14px;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 16px;
+    }
+  }
+}
+
+// 菜单打开时的样式
+.menu-open {
+  overflow: hidden;
+
+  .header__menu-bar {
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
