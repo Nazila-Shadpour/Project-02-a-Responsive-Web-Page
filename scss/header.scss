@@ -37,7 +37,7 @@ $mobile-breakpoint: 1024px;
     }
   }
 
-  // 汉堡菜单按钮样式
+  // hamburger menu
   &__menu-toggle {
     display: none;
     background: none;
@@ -68,24 +68,24 @@ $mobile-breakpoint: 1024px;
 
     @media (max-width: $mobile-breakpoint) {
       position: fixed;
-      top: -150vh; // 改为更大的负值确保完全隐藏
+      top: -150vh; // change to -100vh to hide the menu
       left: 0;
       width: 100%;
       height: 100vh;
       background-color: $background-color;
       margin: 0;
       padding: 80px 20px 20px;
-      transition: all $transition-duration ease-in-out; // 添加ease-in-out使动画更流畅
+      transition: all $transition-duration ease-in-out; // add transition
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      visibility: hidden; // 默认隐藏
+      visibility: hidden; // default hidden
 
       &.active {
         top: 0;
-        visibility: visible; // 显示菜单
+        visibility: visible; // display the menu
         
-        // CTA按钮只在导航菜单激活时显示
+        // CTA button animation
         .header__nav-cta {
             margin-top: 0px;
           opacity: 1;
@@ -124,7 +124,7 @@ $mobile-breakpoint: 1024px;
     &--dropdown {
       .header__dropdown {
         @media (min-width: $mobile-breakpoint + 1) {
-          display: none;  // 桌面端默认隐藏
+          display: none;  // desktop hidden
           position: absolute;
           top: 100%;
           left: -20px;
@@ -196,7 +196,7 @@ $mobile-breakpoint: 1024px;
     }
   }
 
-  // 移动端CTA按钮容器
+  // mobile CTA button container
   &__nav-cta {
     display: none;
 
@@ -210,7 +210,7 @@ $mobile-breakpoint: 1024px;
     }
   }
 
-  // 桌面端CTA按钮容器
+  // desktop CTA button
   &__cta {
     @media (max-width: $mobile-breakpoint) {
       display: none;
@@ -299,7 +299,7 @@ $mobile-breakpoint: 1024px;
   }
 }
 
-// 菜单打开时的样式
+// mobile menu open
 .menu-open {
   overflow: hidden;
 
