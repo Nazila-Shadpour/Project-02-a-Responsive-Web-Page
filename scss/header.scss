@@ -83,7 +83,8 @@ $mobile-breakpoint: 1024px;
 
       &.active {
         top: 0;
-        visibility: visible; // display the menu
+        visibility: visible; // display the menu 
+        //center the menu
         
         // CTA button animation
         .header__nav-cta {
@@ -123,7 +124,7 @@ $mobile-breakpoint: 1024px;
 
     &--dropdown {
       .header__dropdown {
-        @media (min-width: $mobile-breakpoint + 1) {
+        @media (min-width: $mobile-breakpoint) {
           display: none;  // desktop hidden
           position: absolute;
           top: 100%;
@@ -146,7 +147,7 @@ $mobile-breakpoint: 1024px;
         }
       }
 
-      @media (min-width: $mobile-breakpoint + 1) {
+      @media (min-width: $mobile-breakpoint) {
         &:hover {
           .header__dropdown {
             display: block;
@@ -203,10 +204,12 @@ $mobile-breakpoint: 1024px;
     @media (max-width: $mobile-breakpoint) {
       display: block;
       margin-top: auto;
-      padding: 20px 0;
+      padding: 20px;
       opacity: 0;
       transform: translateY(20px);
       transition: all $transition-duration 0.2s;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
@@ -231,6 +234,8 @@ $mobile-breakpoint: 1024px;
       display: block;
       width: 100%;
       text-align: center;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
 
     &:hover {
@@ -245,7 +250,7 @@ $mobile-breakpoint: 1024px;
   }
 
   &__dropdown {
-    @media (min-width: $mobile-breakpoint + 1) {
+    @media (min-width: $mobile-breakpoint) {
       position: absolute;
       top: 100%;
       left: -20px;
