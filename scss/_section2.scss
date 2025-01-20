@@ -1,6 +1,6 @@
 .carlo-section-main {
     background-color: #ffffff;
-    border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 4rem;
     overflow: hidden;
     margin-bottom: 2.5rem;
 }
@@ -139,5 +139,97 @@
 }
 
 @media (min-width: 50em) {
+
+    .carlo-section-main2 {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .carlo-section1,
+    .carlo-section2,
+    .carlo-section3,
+    .carlo-section4 {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 2.9375rem 0rem;
+    }
+
+    .carlo-section-main h2 {
+        font-size: 4rem;
+        line-height: 4.25rem;
+        padding: 1rem 0rem 1rem 0rem;
+        width: 78%;
+    }
+
+    .info-box {
+        margin-right: 4.9375rem;
+        padding-right: 5.625rem;
+    }
+
+    .main-images {
+        width: 50%;
+        border-radius: 1.5rem;
+        height: 60%;
+    }
+
+    .h4-p,
+    .carlo-section5 h4 {
+        font-size: 3rem;
+        line-height: 110%;
+        max-width: 46rem;
+    }
+
+    .section5-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
     
+    
+    .carlo-section5 button {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 75rem;
+        height: 15rem;
+    }
+
+    .btn-txt {
+        margin: 0;
+        position: absolute;
+        bottom: .625rem;
+        left: 1rem;
+    }
+
+    .big-btn {
+        position: relative;
+        width: 12.5rem;
+        height: 6.25rem;
+        padding: .625rem;
+        border-radius: .5rem;
+        background-color: #f9f9f9;
+        display: inline-flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+    
+    }
+
+    .btn-img {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .arw-img {
+        position: absolute;
+        bottom: .625rem;
+        left: 20rem;
+    }
+
 }
