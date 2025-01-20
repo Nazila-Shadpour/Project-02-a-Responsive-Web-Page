@@ -1,0 +1,61 @@
+$primary-color: #ffffff; // White text color
+$secondary-color: #f05a28; // Accent color
+$background-color: #000000; // Black background
+$card-background: rgba(255, 255, 255, 0.1);
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+li {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $secondary-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+
+  b {
+    color: $secondary-color;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+
+  .card {
+    background: $card-background;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+}
