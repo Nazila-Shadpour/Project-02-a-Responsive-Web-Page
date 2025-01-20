@@ -46,16 +46,20 @@ p {
   width: 90%;
   max-width: 1200px;
 
-  .card {
-    background: $card-background;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.card {
+  background: $card-background;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    p {
+  p {
       margin: 0;
       font-size: 1rem;
-    }
   }
+
+ 
+
+}
+
 }

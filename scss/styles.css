@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -72,8 +73,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -335,6 +335,278 @@ body {
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+ul li {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f05a28;
+  cursor: pointer;
+}
+ul li:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+p b {
+  color: #f05a28;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+}
+.cards .card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cards .card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.carlo-section-main {
+  background-color: #ffffff;
+  border-radius: 4rem;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.carlo-section-main2 {
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.carlo-section-main h2 {
+  color: #ff4010;
+  font-size: 2rem;
+  font-family: "Aeonik Medium", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  padding: 1rem 0rem 5.2rem 0rem;
+}
+
+.main-images {
+  border-radius: 1rem;
+  display: block;
+}
+
+.carlo-section-main2 h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: "Aeonik Medium", Helvetica, Arial, Lucida, sans-serif;
+  padding: 1rem 0rem 0.2rem 0rem;
+}
+
+.carlo-section-main2 p,
+.carlo-section-main2 li {
+  line-height: 1.75rem;
+  font-family: "Aeonik Regular", Helvetica, Arial, Lucida, sans-serif;
+}
+
+.first-h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: "Aeonik Regular", Helvetica, Arial, Lucida, sans-serif;
+  line-height: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+
+.h4-section {
+  border: 0 solid;
+  border-left-width: 0.0625rem;
+  border-left-color: rgba(0, 0, 0, 0.0784313725);
+  padding-left: 1.25rem;
+}
+
+.btn-box {
+  padding: 2rem 0rem 6.5rem 0rem;
+}
+
+.orange-btn {
+  padding: 0.9375rem 1rem 0.9375rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 0.9rem;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Aeonik Medium", Helvetica, Arial, Lucida, sans-serif;
+  background-image: linear-gradient(180deg, #ff6442 0%, #ff4010 100%);
+  cursor: pointer;
+}
+
+.orange-btn::after {
+  font-weight: 600;
+  content: "➔";
+  margin-left: 0.625rem;
+}
+
+.carlo-section5 h3 {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6509803922);
+  font-family: "Aeonik Medium", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 550;
+  padding-bottom: 0;
+}
+
+.carlo-section5 h4 {
+  font-size: 1.75rem;
+  line-height: 130%;
+  font-family: "Aeonik Medium", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  padding-bottom: 0.625rem;
+  margin-top: 0;
+}
+
+.h4-p {
+  display: inline;
+  color: #595959;
+}
+
+.section5-btn {
+  display: flex;
+  flex-direction: column;
+  font-family: "Aeonik Regular", Helvetica, Arial, Lucida, sans-serif;
+  gap: 0.625rem;
+  margin-bottom: 4rem;
+}
+
+.section5-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  max-width: 43.75rem;
+  border-radius: 1rem;
+  border-width: 0.0625rem;
+  border-color: rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.section5-btn button .btn-img {
+  margin-right: 10px;
+}
+
+.section5-btn button .arw-img {
+  margin-left: auto;
+}
+
+.btn-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 50em) {
+  .carlo-section-main2 {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .carlo-section1,
+  .carlo-section2,
+  .carlo-section3,
+  .carlo-section4 {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2.9375rem 0rem;
+  }
+  .carlo-section-main h2 {
+    font-size: 4rem;
+    line-height: 4.25rem;
+    padding: 1rem 0rem 1rem 0rem;
+    width: 78%;
+  }
+  .info-box {
+    margin-right: 4.9375rem;
+    padding-right: 5.625rem;
+  }
+  .main-images {
+    width: 50%;
+    border-radius: 1.5rem;
+    height: 60%;
+  }
+  .h4-p,
+  .carlo-section5 h4 {
+    font-size: 3rem;
+    line-height: 110%;
+    max-width: 46rem;
+  }
+  .section5-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  .carlo-section5 button {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 75rem;
+    height: 15rem;
+  }
+  .btn-txt {
+    margin: 0;
+    position: absolute;
+    bottom: 0.625rem;
+    left: 1rem;
+  }
+  .big-btn {
+    position: relative;
+    width: 12.5rem;
+    height: 6.25rem;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .btn-img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .arw-img {
+    position: absolute;
+    bottom: 0.625rem;
+    left: 20rem;
+  }
+}
 .about-section {
   margin: 1rem;
   max-width: 1587px;
@@ -476,8 +748,7 @@ body {
 
 .consultation-images img {
   border-radius: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .consultation-images figcaption {
@@ -528,8 +799,7 @@ body {
   .consultation-images img {
     width: 100%;
     height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 24px;
   }
 }
@@ -641,4 +911,6 @@ body {
     display: flex;
     gap: 1rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
