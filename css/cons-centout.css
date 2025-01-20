@@ -1,0 +1,148 @@
+@charset "UTF-8";
+.senction3-container {
+  padding: 2rem;
+  background-color: #000000;
+  width: 100%;
+}
+.senction3-container .section3-title {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+.senction3-container .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.senction3-container .metric-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+}
+.senction3-container .metric-card .metric-header {
+  margin-bottom: 2rem;
+}
+.senction3-container .metric-card .metric-header .percentage {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+.senction3-container .metric-card .metric-header .percentage.increase {
+  color: #40b37a;
+}
+.senction3-container .metric-card .metric-header .percentage.increase::before {
+  content: "↑";
+  margin-right: 4px;
+}
+.senction3-container .metric-card .metric-header .percentage.decrease {
+  color: #40b37a;
+}
+.senction3-container .metric-card .metric-header .percentage.decrease::before {
+  content: "↓";
+  margin-right: 4px;
+}
+.senction3-container .metric-card .metric-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.senction3-container .benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.senction3-container .benefits-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.senction3-container .benefits-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: rgba(64, 179, 122, 0.8);
+}
+.senction3-container .partners-section {
+  margin: 4rem 0;
+}
+.senction3-container .partners-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+.senction3-container .partners-grid .partner-logo {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.senction3-container .partners-grid .partner-logo:hover {
+  opacity: 1;
+}
+.senction3-container .testimonial-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 3rem;
+  margin-top: 4rem;
+  color: #000000;
+}
+.senction3-container .testimonial-card .testimonial-content {
+  margin-bottom: 2rem;
+}
+.senction3-container .testimonial-card .testimonial-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+.senction3-container .testimonial-card .testimonial-content p:last-child {
+  margin-bottom: 0;
+}
+.senction3-container .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.senction3-container .testimonial-author .author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.senction3-container .testimonial-author .author-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #000000;
+}
+.senction3-container .testimonial-author .author-info p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 1024px) {
+  .senction3-container .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .senction3-container .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .senction3-container .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .senction3-container .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .senction3-container .testimonial-card {
+    padding: 2rem;
+  }
+}
+
+/*# sourceMappingURL=cons-centout.css.map */
