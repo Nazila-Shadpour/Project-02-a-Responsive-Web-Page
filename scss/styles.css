@@ -341,73 +341,49 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  text-align: center;
+  margin-top: 5rem;
+  margin: 2rem;
   background-image: url("../images/sec1images/sec1-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.mission-statement {
+.mission-text {
+  font-size: 2rem;
   text-align: left;
 }
 
 .section-1-header {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: white;
 }
 
-@media (min-width: 50em) {
-  .mission-statement {
-    max-width: 45%;
-    text-align: left;
-    margin-left: 15rem;
-  }
-  .mission-steps {
-    flex-direction: row;
-  }
-  .section-1-header {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-}
 .mission-steps {
   list-style: none;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-top: 10rem;
-}
-
-.description {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  margin-top: 6rem;
+  text-align: left;
 }
 
 b {
   color: white;
 }
 
-li {
-  font-size: 1rem;
-}
-
 ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  flex-direction: column;
   margin-bottom: 2rem;
 }
-ul li {
-  font-size: 0.5rem;
+
+li {
+  font-size: 1rem;
   text-transform: uppercase;
   color: white;
-  cursor: pointer;
-}
-ul li:hover {
-  text-decoration: underline;
 }
 
 p {
@@ -419,24 +395,36 @@ p {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
 }
 
 .card {
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
   padding: 1.5rem;
-  width: calc(25% - 1rem);
-  min-width: 250px;
+  width: 90%;
   text-align: center;
 }
 
-p {
-  font-size: 0.95rem;
-  line-height: 1.4;
+@media (min-width: 60em) {
+  .section-1-wrapper {
+    margin-left: 15rem;
+  }
+  .mission-statement {
+    max-width: 45%;
+    text-align: left;
+    margin-top: 12rem;
+  }
+  .mission-steps {
+    flex-direction: row;
+  }
+  .section-1-header {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  ul {
+    flex-direction: row;
+  }
 }
-
 .carlo-section-main {
   background-color: #ffffff;
   border-radius: 4rem;
