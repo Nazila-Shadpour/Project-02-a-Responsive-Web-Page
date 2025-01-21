@@ -23,6 +23,12 @@ $background-color: #000000;
   text-align: left;
 }
 
+.section-1-header {
+  font-size: 3rem;
+  margin-top: 10rem;
+  color: $secondary-color;
+}
+
 .mission-steps {
   font-size: 1rem;
   list-style: none;
@@ -32,16 +38,9 @@ $background-color: #000000;
   margin-top: 5rem;
 }
 
-
 .mission-text {
   text-align: left;
   font-size: 1.5rem;
-}
-
-.section-1-header {
-  font-size: 3rem;
-  margin-top: 10rem;
-  color: $secondary-color;
 }
 
 // @media (max-width: 20em) {
@@ -74,6 +73,22 @@ $background-color: #000000;
 //   }
 // }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 1.5rem;
+  width: calc(25% - 1rem);
+  min-width: 250px;
+  text-align: center;
+}
+
 
 @media (min-width: 70em) {
   .mission-statement {
@@ -84,6 +99,11 @@ $background-color: #000000;
 
   .mission-steps { 
     flex-direction: row; 
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .section-1-header{
@@ -102,58 +122,26 @@ $background-color: #000000;
   }
 }
 
-.description {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
 b {
   color: $secondary-color; 
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-
-li {
+.mission-list {
   text-transform: uppercase;
   color: $secondary-color;
   }
-}
 
-p {
+
+.card-text {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-
-  b {
-    color: $secondary-color;
-  }
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  overflow: hidden;
+b {
+  color: $secondary-color;
 }
 
-.card {
-  padding: 1.5rem;
-  width: calc(25% - 1rem);
-  min-width: 250px;
-  text-align: center;
-}
-
-p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
 
 
 
