@@ -362,7 +362,7 @@ body {
   gap: 1rem;
   margin-top: 5rem;
 }
-
+  
 .mission-text {
   text-align: left;
   font-size: 1.5rem;
@@ -412,9 +412,10 @@ ul {
   justify-content: center;
   margin-bottom: 2rem;
 }
+
 ul li {
-  text-transform: uppercase;
-  color: white;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -422,6 +423,7 @@ p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+
 p b {
   color: white;
 }
@@ -446,6 +448,8 @@ p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+
 
 .carlo-section-main {
   background-color: #ffffff;
