@@ -341,35 +341,56 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 2rem;
   text-align: center;
+  background-image: url("../images/sec1images/sec1-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .mission-statement {
-  margin-bottom: 3rem;
+  text-align: left;
 }
 
 .section-1-header {
-  text-align: center;
   font-size: 3rem;
-  line-height: 1.2;
-  font-weight: bold;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
-.steps {
+@media (min-width: 50em) {
+  .mission-statement {
+    max-width: 45%;
+    text-align: left;
+    margin-left: 15rem;
+  }
+  .mission-steps {
+    flex-direction: row;
+  }
+  .section-1-header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+.mission-steps {
   list-style: none;
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
+  margin-top: 10rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+b {
+  color: white;
 }
 
 li {
   font-size: 1rem;
-  color: #ff6600;
 }
 
 ul {
@@ -380,11 +401,9 @@ ul {
   margin-bottom: 2rem;
 }
 ul li {
-  font-size: 1rem;
-  color: #ff6600;
-  font-weight: bold;
+  font-size: 0.5rem;
   text-transform: uppercase;
-  color: #f05a28;
+  color: white;
   cursor: pointer;
 }
 ul li:hover {
@@ -396,27 +415,26 @@ p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-p b {
-  color: #f05a28;
-}
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
-.cards .card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
+  padding: 1.5rem;
+  width: calc(25% - 1rem);
+  min-width: 250px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.cards .card p {
-  margin: 0;
-  font-size: 1rem;
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .carlo-section-main {
