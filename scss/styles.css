@@ -335,11 +335,74 @@ body {
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
 
-h1 {
+.section-1-wrapper {
+  position: relative;
+  color: grey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-bottom: 10rem;
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  background-image: url("../images/sec1images/sec1-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mission-statement {
+  text-align: left;
+}
+
+.mission-steps {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.mission-text {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.section-1-header {
+  font-size: 3rem;
+  margin-top: 10rem;
+  color: white;
+}
+
+@media (min-width: 70em) {
+  .mission-statement {
+    max-width: 45%;
+    text-align: left;
+    margin-left: 15rem;
+  }
+  .mission-steps {
+    flex-direction: row;
+  }
+  .section-1-header {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  .card-start {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .card-end {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+b {
+  color: white;
 }
 
 ul {
@@ -350,13 +413,8 @@ ul {
   margin-bottom: 2rem;
 }
 ul li {
-  font-weight: bold;
   text-transform: uppercase;
-  color: #f05a28;
-  cursor: pointer;
-}
-ul li:hover {
-  text-decoration: underline;
+  color: white;
 }
 
 p {
@@ -365,26 +423,28 @@ p {
   margin-bottom: 2rem;
 }
 p b {
-  color: #f05a28;
+  color: white;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
-.cards .card {
-  background: rgba(255, 255, 255, 0.1);
+
+.card {
   padding: 1.5rem;
-  border-radius: 8px;
+  width: calc(25% - 1rem);
+  min-width: 250px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.cards .card p {
-  margin: 0;
-  font-size: 1rem;
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .carlo-section-main {

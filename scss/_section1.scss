@@ -1,13 +1,114 @@
-$primary-color: #ffffff; // White text color
-$secondary-color: #f05a28; // Accent color
-$background-color: #000000; // Black background
-$card-background: rgba(255, 255, 255, 0.1);
+$primary-color: grey; 
+$secondary-color: white; 
+$background-color: #000000; 
 
-h1 {
+.section-1-wrapper {
+  position: relative;
+  color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  padding: 2rem;
+  margin-bottom: 10rem;
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  background-image: url('../images/sec1images/sec1-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mission-statement {
+  text-align: left;
+}
+
+.mission-steps {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+
+.mission-text {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.section-1-header {
+  font-size: 3rem;
+  margin-top: 10rem;
+  color: $secondary-color;
+}
+
+// @media (max-width: 20em) {
+//   .card-start {
+//   border-top-left-radius: 0.5rem;
+//   border-top-right-radius: 0.5rem;
+//   }
+
+//   .card-end {
+//     border-bottom-right-radius: 0.5rem;
+//     border-bottom-left-radius: 0.5rem;
+//   }
+// }
+
+// @media (min-width: 30em) and (max-width: 40em) {
+//   .card-start {
+//     border-top-left-radius: 0.5rem;
+//   }
+  
+//   .card-mid-1 {
+//     border-top-right-radius: 0.5rem;
+//   }
+
+//   .card-mid-2 {
+//     border-bottom-left-radius: 0.5rem;
+//   }
+
+//   .card-end {
+//     border-bottom-right-radius: 0.5rem;
+//   }
+// }
+
+
+@media (min-width: 70em) {
+  .mission-statement {
+    max-width: 45%;
+    text-align: left;
+    margin-left: 15rem;
+  }
+
+  .mission-steps { 
+    flex-direction: row; 
+  }
+
+  .section-1-header{
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .card-start {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+    
+  .card-end {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+b {
+  color: $secondary-color; 
 }
 
 ul {
@@ -18,14 +119,8 @@ ul {
   margin-bottom: 2rem;
 
 li {
-  font-weight: bold;
   text-transform: uppercase;
   color: $secondary-color;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
   }
 }
 
@@ -40,26 +135,24 @@ p {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
 
 .card {
-  background: $card-background;
   padding: 1.5rem;
-  border-radius: 8px;
+  width: calc(25% - 1rem);
+  min-width: 250px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  p {
-      margin: 0;
-      font-size: 1rem;
-  }
-
- 
-
 }
 
+p {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
+
+
