@@ -362,7 +362,7 @@ body {
   gap: 1rem;
   margin-top: 5rem;
 }
-
+  
 .mission-text {
   text-align: left;
   font-size: 1.5rem;
@@ -414,8 +414,8 @@ ul {
 }
 
 ul li {
-  text-transform: uppercase;
-  color: white;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -448,6 +448,8 @@ p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+
 
 .carlo-section-main {
   background-color: #ffffff;
