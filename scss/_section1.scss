@@ -1,0 +1,98 @@
+$primary-color: grey; // White text color
+$secondary-color: #f05a28; // Accent color
+$background-color: #000000; // Black background
+$card-background: rgba(255, 255, 255, 0.1);
+
+.section-1-wrapper {
+  position: relative;
+  color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  // background: add image here
+}
+
+.mission-statement {
+  margin-bottom: 3rem;
+}
+
+.section-1-header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1rem;
+  color: #ff6600; // Orange color for steps
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+li {
+  font-size: 1rem;
+  color: #ff6600; // Orange color for steps
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $secondary-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+
+  b {
+    color: $secondary-color;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+
+.card {
+  background: $card-background;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  p {
+      margin: 0;
+      font-size: 1rem;
+  }
+
+ 
+
+}
+
+}
