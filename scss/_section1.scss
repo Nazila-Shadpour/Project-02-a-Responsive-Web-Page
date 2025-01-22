@@ -1,6 +1,6 @@
-$primary-color: rgb(151, 151, 151); 
-$secondary-color: white; 
-$background-color: #000000; 
+$primary-color: rgb(151, 151, 151);
+$secondary-color: white;
+$background-color: #000000;
 
 html {
   scroll-behavior: smooth;
@@ -15,10 +15,14 @@ html {
   padding: 2rem;
   margin-bottom: 10rem;
   text-align: center;
-  background-image: url('../images/sec1images/sec1-bg.webp');
+  background-image: url("../images/sec1images/sec1-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+b {
+  color: $secondary-color;
 }
 
 .mission-statement {
@@ -60,7 +64,10 @@ html {
   color: $primary-color;
 }
 
-.mission-text-wrapper a:link, a:visited, a:hover, a:active {
+.mission-text-wrapper a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
 }
 
@@ -85,12 +92,20 @@ html {
 
 .cards {
   margin-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
 }
 
 @media (max-width: 30em) {
   .card-start {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
   .card-end {
@@ -102,8 +117,8 @@ html {
 @media (min-width: 30em) and (max-width: 45em) {
   .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  
-    grid-template-rows: repeat(2, 1fr);    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .card-start {
@@ -111,7 +126,7 @@ html {
     grid-row: 1/2;
     border-top-left-radius: 0.5rem;
   }
-  
+
   .card-mid-1 {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -139,36 +154,23 @@ html {
   .card-start {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    }
-  
+  }
+
   .card-end {
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
-    }
-}
-
-.cards {
-
-  justify-content: center;
-  overflow: hidden;
-}
-
-.card {
-  padding: 1.5rem; 
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: left;
+  }
 }
 
 @media (min-width: 70em) {
-
   .mission-statement {
     max-width: 45%;
     text-align: left;
     margin-left: 12rem;
   }
 
-  .mission-steps { 
-    flex-direction: row; 
+  .mission-steps {
+    flex-direction: row;
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -183,7 +185,7 @@ html {
     max-width: 90%;
   }
 
-  .section-1-header{
+  .section-1-header {
     font-size: 3.5rem;
     line-height: 5rem;
   }
@@ -209,19 +211,10 @@ html {
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
   }
-    
+
   .card-end {
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
   }
 }
-
-b {
-  color: $secondary-color; 
-}
-
-
-
-
-
 
