@@ -2,14 +2,16 @@ $primary-color: grey;
 $secondary-color: white; 
 $background-color: #000000; 
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section-1-wrapper {
   position: relative;
   color: $primary-color;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   padding: 2rem;
   margin-bottom: 10rem;
   text-align: center;
@@ -25,8 +27,12 @@ $background-color: #000000;
 
 .section-1-header {
   font-size: 3rem;
-  margin-top: 10rem;
+  margin-top: 15rem;
   color: $secondary-color;
+}
+
+.list-icon {
+  padding-right: 1rem;
 }
 
 .mission-steps {
@@ -35,10 +41,12 @@ $background-color: #000000;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 0rem;
   margin-top: 5rem;
 }
 
 .mission-text {
+  margin-top: 10rem;
   text-align: left;
   font-size: 1.5rem;
 }
@@ -77,24 +85,24 @@ $background-color: #000000;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
+ 
   overflow: hidden;
 }
 
 .card {
-  padding: 1.5rem;
-  width: calc(25% - 1rem);
-  min-width: 250px;
+  padding: 1.5rem; 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
   text-align: center;
 }
 
 
 @media (min-width: 70em) {
+
   .mission-statement {
     max-width: 45%;
     text-align: left;
-    margin-left: 15rem;
+    margin-left: 12rem;
   }
 
   .mission-steps { 
@@ -102,13 +110,26 @@ $background-color: #000000;
     list-style: none;
     display: flex;
     gap: 1rem;
-    justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 20rem;
   }
 
   .section-1-header{
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 5rem;
+  }
+
+  .mission-text {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  .cards {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  .card {
+    width: calc(25% - 1rem);
   }
 
   .card-start {
