@@ -37,6 +37,7 @@ html {
 
 .divider {
   padding: 1.3rem;
+  display: none;
 }
 
 .mission-list {
@@ -172,6 +173,10 @@ html {
     display: flex;
     gap: 1rem;
     margin-bottom: 15rem;
+  }
+
+  .divider {
+    display: flex;
   }
 
   .explore-btn {
