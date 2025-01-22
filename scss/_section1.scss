@@ -45,6 +45,22 @@ html {
   margin-top: 5rem;
 }
 
+.mission-text-wrapper a {
+  color: $primary-color;
+}
+
+.mission-text-wrapper a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.explore-btn {
+  text-align: right;
+}
+
+.explore-btn-icon {
+  padding-left: 0.5rem;
+}
+
 .mission-text {
   margin-top: 10rem;
   text-align: left;
@@ -85,7 +101,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
- 
   overflow: hidden;
 }
 
@@ -93,7 +108,11 @@ html {
   padding: 1.5rem; 
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
-  text-align: center;
+  text-align: left;
+}
+
+.card-icon {
+
 }
 
 
@@ -110,7 +129,11 @@ html {
     list-style: none;
     display: flex;
     gap: 1rem;
-    margin-bottom: 20rem;
+    margin-bottom: 15rem;
+  }
+
+  .explore-btn {
+    max-width: 90%;
   }
 
   .section-1-header{
@@ -154,7 +177,6 @@ b {
 
 
 .card-text {
-  text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
