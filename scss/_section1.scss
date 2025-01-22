@@ -1,4 +1,4 @@
-$primary-color: grey; 
+$primary-color: rgb(151, 151, 151); 
 $secondary-color: white; 
 $background-color: #000000; 
 
@@ -32,7 +32,17 @@ html {
 }
 
 .list-icon {
-  padding-right: 1rem;
+  padding-right: 0.5rem;
+}
+
+.divider {
+  padding: 1.3rem;
+}
+
+.mission-list {
+  color: $primary-color;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
 .mission-steps {
@@ -60,11 +70,6 @@ html {
 .explore-btn-icon {
   padding-left: 0.5rem;
 }
-
-.mission-list {
-  text-transform: uppercase;
-  color: $secondary-color;
-  }
 
 .mission-text {
   margin-top: 10rem;
