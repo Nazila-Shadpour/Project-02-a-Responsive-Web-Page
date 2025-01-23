@@ -6,7 +6,7 @@ $card-bg: rgba(255, 255, 255, 0.05);
 $spacing-unit: 1rem;
 
 .section3-container {
-    padding: $spacing-unit * 8;
+    padding: $spacing-unit * 1;
     background-color: $dark-bg;
     width: 100%;
 
@@ -20,12 +20,11 @@ $spacing-unit: 1rem;
     .metrics-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: $spacing-unit * 2;
         margin-bottom: $spacing-unit * 4;
     }
 
     .metric-card {
-        background: $card-bg;
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
         padding: $spacing-unit * 2;
         
@@ -112,7 +111,7 @@ $spacing-unit: 1rem;
     .testimonial-card {
         background: #FFFFFF;
         border-radius: 12px;
-        padding: $spacing-unit * 3;
+        padding: $spacing-unit * 5;
         margin-top: $spacing-unit * 4;
         color: #000000;
         
@@ -183,4 +182,16 @@ $spacing-unit: 1rem;
             padding: $spacing-unit * 2;
         }
     }
+}
+
+@media (min-width: 60em) {
+    .section3-container {
+        padding: $spacing-unit * 8;
+    }  
+}
+
+@media (min-width: 90em) {
+    .section3-container .testimonial-card {
+        padding: $spacing-unit * 8 $spacing-unit * 25;
+    }  
 }
